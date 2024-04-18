@@ -4,16 +4,18 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import lombok.NoArgsConstructor;
 
 // 실제 database 의 table 구조를 만든다
 // import jakarta.persistence.
 @Entity
+@NoArgsConstructor
 public class Article {
 	// primary key        : @id
 	// 값을 자동으로 채움 : @GeneratedValue
 	@Id
 	@GeneratedValue
-	private  Long    id;
+	private  Long    id; //long : null 입력안됨 => Long
 	@Column
 	private  String  title;
 	@Column
@@ -25,6 +27,7 @@ public class Article {
 		this.title = title;
 		this.content = content;
 	}
+
 	
 	// toString
 	@Override
