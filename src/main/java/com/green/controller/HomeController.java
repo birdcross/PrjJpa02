@@ -11,9 +11,9 @@ public class HomeController {
 	@GetMapping("/hi")
 	public  String   hi() {
 		return "greetings";   
-		  // greetings.mustache  화면을 보여줄 template 이름
-		 // resources/template package 에 생성
-	}
+		  // /src/main/resources/template/ greetings .mustache
+		  // 화면을 보여줄 template 이름		 
+	}	
 	
 	@GetMapping("/hi2") 
 	public  String   hi2( Model model ) {
