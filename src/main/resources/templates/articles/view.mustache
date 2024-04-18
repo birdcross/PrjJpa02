@@ -1,6 +1,7 @@
  {{>layouts/header}}
  
-// 부트스트랩 table 참고
+<!-- 부트스트랩 table 참고 
+ 머스태치 문법 참조 https://bibi6666667.tistory.com/269-->
 <table class="table">
   <thead>
     <tr>
@@ -10,16 +11,21 @@
     </tr>
   </thead>
   <tbody>
-  {{#article}}
+  {{! 주석처리는 !이다}}
+  {{!#article}}
     <tr>
-      <th scope="row">{{id}}</th>
-      <td>{{title}}</td>
-      <td>{{content}}</td>
+      <th scope="row">{{article.id}}</th>
+      <td>{{article.title}}</td>
+      <td>{{article.content}}</td>
     </tr>
-      {{/article}}
+      {{!/article}}
   </tbody>
 </table>
 
+<a href = "/articles/List"> 목록</a>
+<a href = "/articles/WriteForm"> 새 글쓰기</a>
+<a href = "/articles/{{id}}/EditForm"> 수정</a>
+<a href = "/articles/{{id}}/Delete"> 삭제</a>
 
 {{>layouts/footer}}
 
