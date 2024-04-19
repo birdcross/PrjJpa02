@@ -16,4 +16,5 @@ public interface ArticleRepository
 	
 	   @Override
 	   ArrayList<Article> findAll();
+	   
 }

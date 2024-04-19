@@ -4,12 +4,16 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 // 실제 database 의 table 구조를 만든다
 // import jakarta.persistence.
 @Entity
 @NoArgsConstructor
+@Getter
+@Setter
 public class Article {
 	// primary key        : @id
 	// 값을 자동으로 채움 : @GeneratedValue
